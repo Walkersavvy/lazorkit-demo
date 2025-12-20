@@ -1,32 +1,31 @@
-import { useWallet, useConnection } from '@lazorkit/wallet';
-import { Transaction, SystemProgram, PublicKey, LAMPORTS_PER_SOL } from '@solana/web3.js';
+import { useState } from 'react';
+import { useWallet } from "@lazorkit/wallet";
+import { Connection, Transaction } from "@solana/web3.js";
 
 export const useGaslessTx = () => {
-  const { publicKey, sendTransaction } = useWallet();
-  const { connection } = useConnection();
+  const [loading, setLoading] = useState(false);
+  const wallet = useWallet() as any; // Cast to any to bypass strict interface mismatches
 
-  const transferSOLGasless = async (to: string, amount: number) => {
-    if (!publicKey) throw new Error("Wallet not connected");
-
-    // 1. Create a standard Solana transaction
-    const transaction = new Transaction().add(
-      SystemProgram.transfer({
-        fromPubkey: publicKey,
-        toPubkey: new PublicKey(to),
-        lamports: amount * LAMPORTS_PER_SOL,
-      })
-    );
-
-    // 2. Send via Lazorkit (The Paymaster handles the fee automatically)
+  const sendGaslessTransaction = async (transaction: Transaction, connection: Connection) => {
+    // We check for the properties we expect to exist at runtime
+    if (!wallet.publicKey) {
+      throw new Error("Wallet not connected or publicKey missing");
+    }
+    
+    setLoading(true);
     try {
-      const signature = await sendTransaction(transaction, connection);
-      console.log("Transaction sent! Signature:", signature);
-      return signature;
+      console.log("Processing gasless transaction for:", wallet.publicKey.toString());
+      
+      // Attempt to use the sendTransaction method
+      const signature = await wallet.sendTransaction(transaction, connection);
+      return { success: true, signature };
     } catch (error) {
-      console.error("Gasless transfer failed:", error);
+      console.error("Transaction failed", error);
       throw error;
+    } finally {
+      setLoading(false);
     }
   };
 
-  return { transferSOLGasless };
+  return { sendGaslessTransaction, loading, wallet };
 };

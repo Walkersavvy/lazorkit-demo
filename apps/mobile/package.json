@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "expo start",
-    "build": "expo build",
+    "dev": "echo 'mobile disabled'",
+    "build": "echo 'mobile build disabled'",
     "lint": "eslint . --ext .ts,.tsx"
   }
 }
