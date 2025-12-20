@@ -1,0 +1,10 @@
+{
+  "name": "lazor-app-mobile",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "expo start",
+    "build": "expo build",
+    "lint": "eslint . --ext .ts,.tsx"
+  }
+}
