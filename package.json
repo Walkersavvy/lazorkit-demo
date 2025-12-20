@@ -2,34 +2,13 @@
   "name": "lazorkit-demo",
   "version": "0.1.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
-    "dev:web": "pnpm --filter ./apps/web dev",
-    "dev:mobile": "pnpm --filter ./apps/mobile dev",
-    "dev": "pnpm -w -r dev",
-    "build": "pnpm -w -r build",
-    "start": "pnpm --filter ./apps/web start",
-    "lint": "pnpm -w -r lint",
-    "bootstrap": "pnpm install"
-  },
-
-  "dependencies": {
-    "next": "16.1.0",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "build": "pnpm -r build",
+    "dev": "pnpm -r dev",
+    "lint": "pnpm -r lint"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.0",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "turbo": "latest",
+    "typescript": "^5.0.0"
   }
 }

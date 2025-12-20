@@ -9,9 +9,10 @@
     "lint": "eslint . --ext .ts,.tsx"
   },
   "dependencies": {
-    "next": "16.1.0",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "@lazor/core": "workspace:*",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

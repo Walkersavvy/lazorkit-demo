@@ -1,22 +1,32 @@
-import { signAndSendTransaction } from "@lazorkit/wallet";
-import { TransactionInstruction } from "@solana/web3.js";
+import { useWallet, useConnection } from '@lazorkit/wallet';
+import { Transaction, SystemProgram, PublicKey, LAMPORTS_PER_SOL } from '@solana/web3.js';
 
 export const useGaslessTx = () => {
-  const sendGasless = async (instructions: TransactionInstruction[]) => {
+  const { publicKey, sendTransaction } = useWallet();
+  const { connection } = useConnection();
+
+  const transferSOLGasless = async (to: string, amount: number) => {
+    if (!publicKey) throw new Error("Wallet not connected");
+
+    // 1. Create a standard Solana transaction
+    const transaction = new Transaction().add(
+      SystemProgram.transfer({
+        fromPubkey: publicKey,
+        toPubkey: new PublicKey(to),
+        lamports: amount * LAMPORTS_PER_SOL,
+      })
+    );
+
+    // 2. Send via Lazorkit (The Paymaster handles the fee automatically)
     try {
-      // The SDK handles Paymaster logic internally if paymasterUrl is in Provider
-      const signature = await signAndSendTransaction({
-        instructions: instructions,
-        transactionOptions: {
-          clusterSimulation: "devnet"
-        }
-      });
+      const signature = await sendTransaction(transaction, connection);
+      console.log("Transaction sent! Signature:", signature);
       return signature;
-    } catch (err) {
-      console.error("Gasless Tx failed:", err);
-      throw err;
+    } catch (error) {
+      console.error("Gasless transfer failed:", error);
+      throw error;
     }
   };
 
-  return { sendGasless };
+  return { transferSOLGasless };
 };

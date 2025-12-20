@@ -12,14 +12,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "paths": {
-      "@/*": ["apps/web/src/*", "packages/*/src/*"]
+      "@/*": ["apps/web/src/*"],
+      "@lazor/core": ["packages/lazor-core/src/index.ts"],
+      "@lazor/core/*": ["packages/lazor-core/src/*"],
+      "@lazor/ui/*": ["packages/ui/src/*"]
     }
   },
   "include": [
@@ -27,8 +24,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }
