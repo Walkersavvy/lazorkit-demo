@@ -5,8 +5,8 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.tsx --format cjs,esm --dts --clean --no-dts",
-    "dev": "tsup src/index.ts --format cjs,esm --watch --dts"
+    "build": "tsup src/index.ts --format cjs,esm --clean --no-dts",
+    "dev": "tsup src/index.ts --format cjs,esm --watch --no-dts"
   },
   "dependencies": {
     "@lazorkit/wallet": "latest",

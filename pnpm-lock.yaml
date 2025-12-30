@@ -7,10 +7,23 @@ settings:
 importers:
 
   .:
-    devDependencies:
-      turbo:
+    dependencies:
+      '@lazorkit/wallet':
         specifier: latest
-        version: 2.7.0
+        version: 2.0.1(@coral-xyz/anchor@0.31.1(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10))(@solana-program/token@0.9.0(@solana/kit@5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10))))(@solana/kit@5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(@solana/kora@0.1.0)(@solana/wallet-adapter-base@0.9.27(@solana/web3.js@1.98.4(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)))(@solana/wallet-standard-features@1.3.0)(@solana/web3.js@1.98.4(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10))(@wallet-standard/base@1.1.0)(@wallet-standard/features@1.1.0)(@wallet-standard/wallet@1.1.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(zustand@5.0.9(@types/react@19.2.7)(react@19.2.3))
+      '@solana/web3.js':
+        specifier: latest
+        version: 1.98.4(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      react:
+        specifier: ^18.0.0 || ^19.0.0
+        version: 19.2.3
+      zustand:
+        specifier: ^5.0.0
+        version: 5.0.9(@types/react@19.2.7)(react@19.2.3)
+    devDependencies:
+      tsup:
+        specifier: latest
+        version: 8.5.1(jiti@2.6.1)(postcss@8.5.6)(typescript@5.9.3)
       typescript:
         specifier: ^5.0.0
         version: 5.9.3
@@ -2771,40 +2784,6 @@ packages:
       typescript:
         optional: true
 
-  turbo-darwin-64@2.7.0:
-    resolution: {integrity: sha512-gwqL7cJOSYrV/jNmhXM8a2uzSFn7GcUASOuen6OgmUsafUj9SSWcgXZ/q0w9hRoL917hpidkdI//UpbxbZbwwg==}
-    cpu: [x64]
-    os: [darwin]
-
-  turbo-darwin-arm64@2.7.0:
-    resolution: {integrity: sha512-f3F5DYOnfE6lR6v/rSld7QGZgartKsnlIYY7jcF/AA7Wz27za9XjxMHzb+3i4pvRhAkryFgf2TNq7eCFrzyTpg==}
-    cpu: [arm64]
-    os: [darwin]
-
-  turbo-linux-64@2.7.0:
-    resolution: {integrity: sha512-KsC+UuKlhjCL+lom10/IYoxUsdhJOsuEki72YSr7WGYUSRihcdJQnaUyIDTlm0nPOb+gVihVNBuVP4KsNg1UnA==}
-    cpu: [x64]
-    os: [linux]
-
-  turbo-linux-arm64@2.7.0:
-    resolution: {integrity: sha512-1tjIYULeJtpmE/ovoI9qPBFJCtUEM7mYfeIMOIs4bXR6t/8u+rHPwr3j+vRHcXanIc42V1n3Pz52VqmJtIAviw==}
-    cpu: [arm64]
-    os: [linux]
-
-  turbo-windows-64@2.7.0:
-    resolution: {integrity: sha512-KThkAeax46XiH+qICCQm7R8V2pPdeTTP7ArCSRrSLqnlO75ftNm8Ljx4VAllwIZkILrq/GDM8PlyhZdPeUdDxQ==}
-    cpu: [x64]
-    os: [win32]
-
-  turbo-windows-arm64@2.7.0:
-    resolution: {integrity: sha512-kzI6rsQ3Ejs+CkM9HEEP3Z4h5YMCRxwIlQXFQmgXSG3BIgorCkRF2Xr7iQ2i9AGwY/6jbiAYeJbvi3yCp+noFw==}
-    cpu: [arm64]
-    os: [win32]
-
-  turbo@2.7.0:
-    resolution: {integrity: sha512-1dUGwi6cSSVZts1BwJa/Gh7w5dPNNGsNWZEAuRKxXWME44hTKWpQZrgiPnqMc5jJJOovzPK5N6tL+PHYRYL5Wg==}
-    hasBin: true
-
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -3380,6 +3359,25 @@ snapshots:
       react-dom: 19.2.3(react@19.2.3)
       zustand: 5.0.9(@types/react@19.2.7)(react@19.2.3)
 
+  '@lazorkit/wallet@2.0.1(@coral-xyz/anchor@0.31.1(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10))(@solana-program/token@0.9.0(@solana/kit@5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10))))(@solana/kit@5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(@solana/kora@0.1.0)(@solana/wallet-adapter-base@0.9.27(@solana/web3.js@1.98.4(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)))(@solana/wallet-standard-features@1.3.0)(@solana/web3.js@1.98.4(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10))(@wallet-standard/base@1.1.0)(@wallet-standard/features@1.1.0)(@wallet-standard/wallet@1.1.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(zustand@5.0.9(@types/react@19.2.7)(react@19.2.3))':
+    dependencies:
+      '@coral-xyz/anchor': 0.31.1(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@solana-program/token': 0.9.0(@solana/kit@5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10)))
+      '@solana/kit': 5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10))
+      '@solana/kora': 0.1.0
+      '@solana/wallet-adapter-base': 0.9.27(@solana/web3.js@1.98.4(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10))
+      '@solana/wallet-standard-features': 1.3.0
+      '@solana/web3.js': 1.98.4(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@wallet-standard/base': 1.1.0
+      '@wallet-standard/features': 1.1.0
+      '@wallet-standard/wallet': 1.1.0
+      bs58: 6.0.0
+      eventemitter3: 5.0.1
+      js-sha256: 0.11.1
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+      zustand: 5.0.9(@types/react@19.2.7)(react@19.2.3)
+
   '@napi-rs/wasm-runtime@0.2.12':
     dependencies:
       '@emnapi/core': 1.7.1
@@ -3508,6 +3506,10 @@ snapshots:
   '@solana-program/token@0.9.0(@solana/kit@5.1.0(typescript@5.9.3)(ws@7.5.10(bufferutil@4.1.0)(utf-8-validate@5.0.10)))':
     dependencies:
       '@solana/kit': 5.1.0(typescript@5.9.3)(ws@7.5.10(bufferutil@4.1.0)(utf-8-validate@5.0.10))
+
+  '@solana-program/token@0.9.0(@solana/kit@5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10)))':
+    dependencies:
+      '@solana/kit': 5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10))
 
   '@solana/accounts@5.1.0(typescript@5.9.3)':
     dependencies:
@@ -3664,6 +3666,33 @@ snapshots:
       - fastestsmallesttextencoderdecoder
       - ws
 
+  '@solana/kit@5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10))':
+    dependencies:
+      '@solana/accounts': 5.1.0(typescript@5.9.3)
+      '@solana/addresses': 5.1.0(typescript@5.9.3)
+      '@solana/codecs': 5.1.0(typescript@5.9.3)
+      '@solana/errors': 5.1.0(typescript@5.9.3)
+      '@solana/functional': 5.1.0(typescript@5.9.3)
+      '@solana/instruction-plans': 5.1.0(typescript@5.9.3)
+      '@solana/instructions': 5.1.0(typescript@5.9.3)
+      '@solana/keys': 5.1.0(typescript@5.9.3)
+      '@solana/offchain-messages': 5.1.0(typescript@5.9.3)
+      '@solana/programs': 5.1.0(typescript@5.9.3)
+      '@solana/rpc': 5.1.0(typescript@5.9.3)
+      '@solana/rpc-parsed-types': 5.1.0(typescript@5.9.3)
+      '@solana/rpc-spec-types': 5.1.0(typescript@5.9.3)
+      '@solana/rpc-subscriptions': 5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10))
+      '@solana/rpc-types': 5.1.0(typescript@5.9.3)
+      '@solana/signers': 5.1.0(typescript@5.9.3)
+      '@solana/sysvars': 5.1.0(typescript@5.9.3)
+      '@solana/transaction-confirmation': 5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10))
+      '@solana/transaction-messages': 5.1.0(typescript@5.9.3)
+      '@solana/transactions': 5.1.0(typescript@5.9.3)
+      typescript: 5.9.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+      - ws
+
   '@solana/kora@0.1.0': {}
 
   '@solana/nominal-types@5.1.0(typescript@5.9.3)':
@@ -3761,6 +3790,16 @@ snapshots:
     optionalDependencies:
       ws: 7.5.10(bufferutil@4.1.0)(utf-8-validate@5.0.10)
 
+  '@solana/rpc-subscriptions-channel-websocket@5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10))':
+    dependencies:
+      '@solana/errors': 5.1.0(typescript@5.9.3)
+      '@solana/functional': 5.1.0(typescript@5.9.3)
+      '@solana/rpc-subscriptions-spec': 5.1.0(typescript@5.9.3)
+      '@solana/subscribable': 5.1.0(typescript@5.9.3)
+      typescript: 5.9.3
+    optionalDependencies:
+      ws: 8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+
   '@solana/rpc-subscriptions-spec@5.1.0(typescript@5.9.3)':
     dependencies:
       '@solana/errors': 5.1.0(typescript@5.9.3)
@@ -3778,6 +3817,24 @@ snapshots:
       '@solana/rpc-spec-types': 5.1.0(typescript@5.9.3)
       '@solana/rpc-subscriptions-api': 5.1.0(typescript@5.9.3)
       '@solana/rpc-subscriptions-channel-websocket': 5.1.0(typescript@5.9.3)(ws@7.5.10(bufferutil@4.1.0)(utf-8-validate@5.0.10))
+      '@solana/rpc-subscriptions-spec': 5.1.0(typescript@5.9.3)
+      '@solana/rpc-transformers': 5.1.0(typescript@5.9.3)
+      '@solana/rpc-types': 5.1.0(typescript@5.9.3)
+      '@solana/subscribable': 5.1.0(typescript@5.9.3)
+      typescript: 5.9.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+      - ws
+
+  '@solana/rpc-subscriptions@5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10))':
+    dependencies:
+      '@solana/errors': 5.1.0(typescript@5.9.3)
+      '@solana/fast-stable-stringify': 5.1.0(typescript@5.9.3)
+      '@solana/functional': 5.1.0(typescript@5.9.3)
+      '@solana/promises': 5.1.0(typescript@5.9.3)
+      '@solana/rpc-spec-types': 5.1.0(typescript@5.9.3)
+      '@solana/rpc-subscriptions-api': 5.1.0(typescript@5.9.3)
+      '@solana/rpc-subscriptions-channel-websocket': 5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@solana/rpc-subscriptions-spec': 5.1.0(typescript@5.9.3)
       '@solana/rpc-transformers': 5.1.0(typescript@5.9.3)
       '@solana/rpc-types': 5.1.0(typescript@5.9.3)
@@ -3872,6 +3929,23 @@ snapshots:
       '@solana/promises': 5.1.0(typescript@5.9.3)
       '@solana/rpc': 5.1.0(typescript@5.9.3)
       '@solana/rpc-subscriptions': 5.1.0(typescript@5.9.3)(ws@7.5.10(bufferutil@4.1.0)(utf-8-validate@5.0.10))
+      '@solana/rpc-types': 5.1.0(typescript@5.9.3)
+      '@solana/transaction-messages': 5.1.0(typescript@5.9.3)
+      '@solana/transactions': 5.1.0(typescript@5.9.3)
+      typescript: 5.9.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+      - ws
+
+  '@solana/transaction-confirmation@5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10))':
+    dependencies:
+      '@solana/addresses': 5.1.0(typescript@5.9.3)
+      '@solana/codecs-strings': 5.1.0(typescript@5.9.3)
+      '@solana/errors': 5.1.0(typescript@5.9.3)
+      '@solana/keys': 5.1.0(typescript@5.9.3)
+      '@solana/promises': 5.1.0(typescript@5.9.3)
+      '@solana/rpc': 5.1.0(typescript@5.9.3)
+      '@solana/rpc-subscriptions': 5.1.0(typescript@5.9.3)(ws@8.18.3(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@solana/rpc-types': 5.1.0(typescript@5.9.3)
       '@solana/transaction-messages': 5.1.0(typescript@5.9.3)
       '@solana/transactions': 5.1.0(typescript@5.9.3)
@@ -4683,8 +4757,8 @@ snapshots:
       '@next/eslint-plugin-next': 16.1.0
       eslint: 9.39.2(jiti@2.6.1)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0)(eslint@9.39.2(jiti@2.6.1))
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.2(jiti@2.6.1))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-react: 7.37.5(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-react-hooks: 7.0.1(eslint@9.39.2(jiti@2.6.1))
@@ -4706,7 +4780,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@9.39.2(jiti@2.6.1)):
+  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1)):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.3
@@ -4717,22 +4791,22 @@ snapshots:
       tinyglobby: 0.2.15
       unrs-resolver: 1.11.1
     optionalDependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.2(jiti@2.6.1))
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.2(jiti@2.6.1)):
+  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       eslint: 9.39.2(jiti@2.6.1)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0)(eslint@9.39.2(jiti@2.6.1))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.2(jiti@2.6.1)):
+  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1)):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
@@ -4743,7 +4817,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.39.2(jiti@2.6.1)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.2(jiti@2.6.1))
+      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -5913,33 +5987,6 @@ snapshots:
       - supports-color
       - tsx
       - yaml
-
-  turbo-darwin-64@2.7.0:
-    optional: true
-
-  turbo-darwin-arm64@2.7.0:
-    optional: true
-
-  turbo-linux-64@2.7.0:
-    optional: true
-
-  turbo-linux-arm64@2.7.0:
-    optional: true
-
-  turbo-windows-64@2.7.0:
-    optional: true
-
-  turbo-windows-arm64@2.7.0:
-    optional: true
-
-  turbo@2.7.0:
-    optionalDependencies:
-      turbo-darwin-64: 2.7.0
-      turbo-darwin-arm64: 2.7.0
-      turbo-linux-64: 2.7.0
-      turbo-linux-arm64: 2.7.0
-      turbo-windows-64: 2.7.0
-      turbo-windows-arm64: 2.7.0
 
   type-check@0.4.0:
     dependencies:

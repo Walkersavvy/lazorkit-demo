@@ -1,24 +1,18 @@
-"use client";
-
 import "./globals.css";
-import { WalletProvider } from "@lazor/core";
+import { WalletClientProvider } from "@/components/WalletClientProvider";
 
-// Optional: define config for future use (gasless, passkeys, etc.)
-const lazorConfig = {
-  rpcUrl: process.env.NEXT_PUBLIC_LAZORKIT_RPC_URL || "",
-  paymasterUrl: process.env.NEXT_PUBLIC_LAZORKIT_PAYMASTER_URL || "",
-  portalUrl: process.env.NEXT_PUBLIC_LAZORKIT_PORTAL_URL || "",
-  network: "devnet" as const,
+export const metadata = {
+  title: "Lazorkit Demo",
+  description: "Seedless wallet, gasless transfers, passkey login",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
-        {/* Provider must NOT receive config */}
-        <WalletProvider>
+        <WalletClientProvider>
           {children}
-        </WalletProvider>
+        </WalletClientProvider>
       </body>
     </html>
   );

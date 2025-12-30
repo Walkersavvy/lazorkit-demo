@@ -1,0 +1,64 @@
+/* Minimal Web3 Theme */
+:root {
+  --bg: #0b0e11;
+  --card: #15191e;
+  --border: #2d333b;
+  --primary: #5865f2;
+  --text: #fff;
+  --muted: #848d97;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+}
+
+/* Layout */
+main {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Typography */
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: var(--muted);
+}
+
+/* Button */
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: var(--border);
+  color: var(--muted);
+}
+
+/* Utility */
+.mono {
+  font-family: monospace;
+  background: rgba(255,255,255,0.05);
+  padding: 2px 4px;
+  border-radius: 4px;
+}

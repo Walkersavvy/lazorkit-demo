@@ -1,41 +1,33 @@
-"use client";
+import { GaslessTransferButton } from "../components/SendSolButton";
 
-import React from "react";
-import { ConnectButton } from "@/components/ConnectButton";
-
-export default function Home() {
+export default function Page() {
   return (
-    <main
-      style={{
-        padding: "4rem",
-        textAlign: "center",
-        fontFamily: "sans-serif",
-        background: "#0f172a",
-        color: "white",
-        minHeight: "100vh",
-      }}
-    >
-      <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>Lazorkit Demo</h1>
-      <p
-        style={{
-          fontSize: "1.2rem",
-          color: "#94a3b8",
-          marginBottom: "2rem",
-        }}
-      >
-        Connect your wallet to begin.
-      </p>
+    <main style={{ padding: '40px', maxWidth: '600px', margin: '0 auto' }}>
+      <header style={{ marginBottom: '40px', textAlign: 'center' }}>
+        <h1 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>⚡ Lazorkit Challenge</h1>
+        <p style={{ color: '#848d97' }}>Experience Gasless Transactions on Solana</p>
+      </header>
 
-      <div
-        style={{
-          padding: "2rem",
-          border: "1px solid #334155",
-          borderRadius: "12px",
-          display: "inline-block",
-        }}
-      >
-        <ConnectButton />
-      </div>
+      <section className="challenge-container" style={{ 
+        background: '#15191e', 
+        padding: '30px', 
+        borderRadius: '12px', 
+        border: '1px solid #2d333b' 
+      }}>
+        <h2 style={{ marginTop: 0 }}>Gasless Transfer</h2>
+        <p>
+          This demo uses a <strong>Smart Account</strong>. When you click the button, 
+          the transaction is sponsored by our Paymaster—meaning you pay 0 SOL in gas fees.
+        </p>
+        
+        <div style={{ marginTop: '30px' }}>
+          <GaslessTransferButton />
+        </div>
+      </section>
+
+      <footer style={{ marginTop: '40px', opacity: 0.5, fontSize: '0.8rem', textAlign: 'center' }}>
+        Powered by Lazorkit Account Abstraction
+      </footer>
     </main>
   );
 }
